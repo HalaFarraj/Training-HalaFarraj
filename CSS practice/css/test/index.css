@@ -1,0 +1,15 @@
+.box{
+    max-width: 960px;
+}
+
+.one{
+    background-color:red;
+}
+
+.two{
+    background-color: blue;
+}
+
+.three{
+    background-color: green;
+}
