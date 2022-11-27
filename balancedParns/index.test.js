@@ -33,8 +33,8 @@ function peek(items)
 }
 
 function balancedParens(input) {
-  let openings = "('[{";
-  let closings = ")']}";
+  let openings = "([{";
+  let closings = ")]}";
 
   let bracketsStack =[];
 
