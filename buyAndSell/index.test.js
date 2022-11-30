@@ -11,10 +11,11 @@ const maximumProfit = function(array) {
 
       while(i<=j)
       {
-        let profit = array[j] - array[i];
-        if (profit > maxProfit)
-          maxProfit = profit;
-
+        if (array[j] > array[i]){
+            let profit = array[j] - array[i];
+            if (profit > maxProfit)
+              maxProfit = profit;
+        }
         j--;
       }
     }
