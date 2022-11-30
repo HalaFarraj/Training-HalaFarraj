@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.body-container{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-shrink: 1;
+   
+}
+
+.header{
+    background-image: linear-gradient(to right, rgb(149, 31, 28) , rgb(227, 114, 36));
+    height: 63px ;
+    width: 100%;
+    color: white;   
+    font-size: 20px;
+    padding: 15px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header-container{
+    display: flex;
+    flex-direction: row;
+}
+
+
+.header h5{
+    margin-top: 2px;
+    margin-right: 5px;
+}
+
+.cards-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
