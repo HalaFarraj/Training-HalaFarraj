@@ -49,7 +49,8 @@
   {
     return function(arg)
     {
-      return function3(function2(function1(arg)));
+      // compose()
+      return function3(compose(function1,function2)(arg));
       
     }
   }
