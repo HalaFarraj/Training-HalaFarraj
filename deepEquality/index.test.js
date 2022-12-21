@@ -14,62 +14,64 @@
 
 function isDeepEquals(obj1, obj2) {
   // TO DO
-  if(Object.entries(obj1).length != Object.entries(obj2).length)
-    return false; 
-  else{
-    if (obj1 != null && obj2 != null )
-      if (JSON.stringify(obj1)=== JSON.stringify(obj2))
-        return true;
-      else 
-        return false;
+  if (Object.entries(obj1).length != Object.entries(obj2).length)
+    return false;
+  else {
+    if (obj1 != null && obj2 != null)
+      if (JSON.stringify(obj1) === JSON.stringify(obj2)) return true;
+      else return false;
   }
 }
-console.log(isDeepEquals({a:1, b: {c:3}},{a:1, b: {c:3}})); // true
-console.log(isDeepEquals({a:1, b: {c:5}},{a:1, b: {c:6}})); // false
+console.log(
+  isDeepEquals({ a: 1, b: { c: 3 } }, { a: 1, b: { c: 3 } })
+); // true
+console.log(
+  isDeepEquals({ a: 1, b: { c: 5 } }, { a: 1, b: { c: 6 } })
+); // false
 
-// describe('Tests', () => {
-//   const mockObj = {
-//     a: 1,
-//     b: {
-//       c: 3,
-//     },
-//   };
+describe('Tests', () => {
+  const mockObj = {
+    a: 1,
+    b: {
+      c: 3,
+    },
+  };
 
-//   it('test isDeepEquals #case1', () => {
-//     const result = isDeepEquals(null, {});
-//     expect(result).toEqual(false);
-//   });
+  it('test isDeepEquals #case1', () => {
+    const result = isDeepEquals(null, {});
+    expect(result).toEqual(false);
+  });
 
-//   it('test isDeepEquals #case2', () => {
-//     const result = isDeepEquals();
-//     expect(result).toEqual(false);
-//   });
+  it('test isDeepEquals #case2', () => {
+    const result = isDeepEquals();
+    expect(result).toEqual(false);
+  });
 
-//   it('test isDeepEquals #case3', () => {
-//     const result = isDeepEquals(mockObj, mockObj);
-//     expect(result).toEqual(true);
-//   });
+  it('test isDeepEquals #case3', () => {
+    const result = isDeepEquals(mockObj, mockObj);
+    expect(result).toEqual(true);
+  });
 
-//   it('test isDeepEquals #case4', () => {
-//     const result = isDeepEquals(null, null);
-//     expect(result).toEqual(false);
-//   });
+  it('test isDeepEquals #case4', () => {
+    const result = isDeepEquals(null, null);
+    expect(result).toEqual(false);
+  });
 
-//   it('test isDeepEquals #case5', () => {
-//     const result = isDeepEquals(mockObj, {...mockObj,
-//       b: {
-//         c: '3',
-//       },
-//     });
-//     expect(result).toEqual(false);
-//   });
+  it('test isDeepEquals #case5', () => {
+    const result = isDeepEquals(mockObj, {...mockObj,
+      b: {
+        c: '3',
+      },
+    });
+    expect(result).toEqual(false);
+  });
 
-//   it('test isDeepEquals #case6', () => {
-//     const result = isDeepEquals(mockObj, {...mockObj,
-//       b: {
-//         c: 6,
-//       },
-//     });
-//     expect(result).toEqual(false);
-//   });
-// });
+  it('test isDeepEquals #case6', () => {
+    const result = isDeepEquals(mockObj, {...mockObj,
+      b: {
+        c: 6,
+      },
+    });
+    expect(result).toEqual(false);
+  });
+});
